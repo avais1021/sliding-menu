@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* font-family: 'Anton', sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Mingzat', sans-serif;
+font-family: 'Noto Serif', serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Splash', cursive; */
+
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.support{
+    display: inline-block;
+    width: 100%;
+}
+
+/* ////////////////////////////////////////////////////// */
+
+.sliding-menue{
+    min-height: 100vh;
+    background: url(bokeh-abstract-blurred-silver-white-beautiful-background-soft-color-light-glitter-sparkles_51768-59.webp) no-repeat center center/cover;
+    font-family: 'Noto Serif', serif
+}
+
+.wrapper-s-m{
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.title{
+    background: black;
+    width: 150px;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px; 
+    font-size: 25px;
+    cursor: pointer;
+    transition: 2s linear;
+}
+
+.close{
+    display: none;
+}
+
+.items{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    background: black;
+    border-radius: 10px;
+}
+
+.items a{
+    color: white;
+    text-decoration: none;
+}
+
+.items ul{
+    line-height: 3;
+    list-style: none;
+    width: 100%;
+}
+
+.items ul li:hover{
+    box-shadow: inset 0px 0px 10px #33ffff ;
+    border-radius: 50px;
+    
+}
+
+.items{
+    /* display: none; */
+    height: 0px;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+    transition: 2s linear;
+    
+}
+.items::after{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: #5709e3;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    opacity: 0.2;
+    border-radius: 20px;
+    z-index: -1;
+    
+}
+
+.open + .items{
+    /* display: block; */
+    height: 240px;
+
+}
+
+.open .bars{
+    display: none;
+}
+
+.open .close{
+    display: block;
+}
+
+.title.open{
+    width: 100%;
+}
+
