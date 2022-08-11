@@ -48,7 +48,10 @@ font-family: 'Splash', cursive; */
     font-size: 25px;
     cursor: pointer;
     transition: 2s linear;
+    /* -webkit-tap-highlight-color: transparent; */
+    outline: none;
 }
+
 
 .close{
     display: none;
